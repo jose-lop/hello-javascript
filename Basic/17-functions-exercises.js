@@ -132,4 +132,4 @@ function factorial(n) {
   }
   return resultado;
 }
-console.log(factorial(5)); // 120
+console.log(factorial(5)); // 120 ...
