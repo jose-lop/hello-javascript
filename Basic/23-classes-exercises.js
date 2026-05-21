@@ -197,3 +197,51 @@ class gato extends animal {
 let miGato = new gato("MoureCat");
 console.log(miGato);
 console.log(miGato.sonido());
+
+cadena = "Hola Mundo";
+
+function stringReversa(cadena) {
+  return cadena.split("").reverse().join("");
+}
+
+console.log(stringReversa(cadena));
+
+return (frase = "hola mundo");
+
+function palabraMasLarga(frase) {
+  const palabras = frase.split(" ");
+  let max = 0;
+
+  for (let palabra of palabras) {
+    if (palabra.length > max) {
+      max = palabra.length;
+    }
+  }
+
+  return max;
+  console.log(palabraMasLarga);
+}
+
+console.log(palabraMasLarga(cadena));
+
+// 7. Crea una función que valide si un número es mayor a 100 y lance una excepción personalizada
+console.log(
+  "\n7. Crea una función que valide si un número es mayor a 100 y lance una excepción personalizada",
+);
+
+// Clase de error personalizada
+class NumeroError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "NumeroError";
+  }
+}
+
+function validarNumero(numero) {
+  if (numero > 100) {
+    throw new NumeroError("El número es mayor a 100");
+  }
+  return "Número válido";
+}
+
+// Caso donde el número es mayor a 100
